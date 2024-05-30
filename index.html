@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Platform For Engineering</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #071320;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        
+        nav ul li a:hover {
+            background-color: #07101a;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .search-bar {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 10px;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            background-color: #060e16;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #060b10;
+        }
+
+        .content-list ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .content-list ul li {
+            margin-bottom: 10px;
+        }
+
+        .content-list ul li a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .books-list {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .books-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .books-list ul li {
+            margin-bottom: 10px;
+        }
+
+        .books-list ul li a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>An Educational Platform For Engineering</h1>
+    </header>
+    <nav>
+        <ul>
+           
+            <li><a href="1year.html">1st year</a></li>
+            <li><a href="2year.html">2nd year</a></li>
+            <li><a href="3year.html">3rd year</a></li>
+            <li><a href="4year.html">4th year</a></li>
+        </ul>
+    </nav>
+    <nav>
+        <ul>
+            
+            <li><a href="cse.html">CSE</a></li>
+            <li><a href="aiml.html">AIML</a></li>
+            <li><a href="ds.html">DS</a></li>
+            <li><a href="cyber.html">CYBER SECURITY</a></li>
+        </ul>
+    </nav>
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for courses or books...">
+        <button onclick="searchContent()">Search</button>
+    </div>
+    <main>
+        <div class="content-list">
+            <ul id="contentUl">
+                <li><a href="1year.html">1st year</a></li>
+                <li><a href="2year.html">2nd year</a></li>
+                <li><a href="3year.html">3rd year</a></li>
+                <li><a href="4year.html">4th year</a></li>
+                <li><a href="cse.html">CSE</a></li>
+                <li><a href="aiml.html">AIML</a></li>
+                <li><a href="ds.html">DS</a></li>
+                <li><a href="cyber.html">CYBER SECURITY</a></li>
+            </ul>
+        </div>
+        <div class="books-list">
+            <h2>Online Books</h2>
+            <ul id="booksUl">
+                <li><a href="https://www.example.com/cse_book1" target="_blank">Book 1 Title</a></li>
+                <li><a href="https://www.example.com/cse_book2" target="_blank">Book 2 Title</a></li>
+                <li><a href="https://www.example.com/cse_book3" target="_blank">Book 3 Title</a></li>
+                <!-- Add more book links here -->
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Educational Platform For Engineering. All rights reserved.</p>
+    </footer>
+    <script>
+        function searchContent() {
+            var input = document.getElementById('searchInput');
+            var filter = input.value.toLowerCase();
+            var contentUl = document.getElementById('contentUl');
+            var booksUl = document.getElementById('booksUl');
+            var contentLi = contentUl.getElementsByTagName('li');
+            var booksLi = booksUl.getElementsByTagName('li');
+
+            // Filter courses
+            for (var i = 0; i < contentLi.length; i++) {
+                var a = contentLi[i].getElementsByTagName('a')[0];
+                var txtValue = a.textContent || a.innerText;
+                if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                    contentLi[i].style.display = "";
+                } else {
+                    contentLi[i].style.display = "none";
+                }
+            }
+
+            // Filter books
+            for (var i = 0; i < booksLi.length; i++) {
+                var a = booksLi[i].getElementsByTagName('a')[0];
+                var txtValue = a.textContent || a.innerText;
+                if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                    booksLi[i].style.display = "";
+                } else {
+                    booksLi[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
