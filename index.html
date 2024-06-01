@@ -6,20 +6,23 @@
     <title>Educational Platform For Engineering</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
+            background: #0d0d0d;
+            color: #fff;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: #333;
-            color: #fff;
+            background: linear-gradient(45deg, #0d0d0d, #333);
+            color: #0ff;
             padding: 20px;
             text-align: center;
+            border-bottom: 2px solid #0ff;
         }
 
         nav {
-            background-color: #444;
+            background: #111;
             padding: 10px;
         }
 
@@ -28,25 +31,29 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            line-height: 1px;
         }
 
         nav ul li {
             display: inline;
             margin-right: 10px;
+            line-height: 1px;
         }
 
         nav ul li a {
-            color: #fff;
+            color: #0ff;
             text-decoration: none;
             padding: 10px 20px;
-            background-color: #071320;
+            background: #111;
+            border: 1px solid #0ff;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
         }
 
-        
         nav ul li a:hover {
-            background-color: #07101a;
+            background-color: #0ff;
+            color: #111;
+            transform: scale(1.1);
         }
 
         main {
@@ -54,13 +61,14 @@
         }
 
         footer {
-            background-color: #333;
-            color: #fff;
+            background: linear-gradient(45deg, #333, #0d0d0d);
+            color: #0ff;
             text-align: center;
             padding: 10px;
             position: fixed;
             bottom: 0;
             width: 100%;
+            border-top: 2px solid #0ff;
         }
 
         .search-bar {
@@ -70,22 +78,31 @@
 
         .search-bar input[type="text"] {
             padding: 10px;
-            width: 200px;
-            border: 1px solid #ccc;
+            width: 300px;
+            border: 1px solid #0ff;
             border-radius: 5px;
+            background: #111;
+            color: #0ff;
+            transition: border 0.3s ease;
+        }
+
+        .search-bar input[type="text"]:focus {
+            border: 1px solid #00f5ff;
         }
 
         .search-bar button {
             padding: 10px 20px;
-            background-color: #060e16;
-            color: #fff;
+            background: #0ff;
+            color: #111;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         .search-bar button:hover {
-            background-color: #060b10;
+            background-color: #00f5ff;
+            transform: scale(1.1);
         }
 
         .content-list ul {
@@ -99,8 +116,15 @@
         }
 
         .content-list ul li a {
-            color: #061320;
+            color: #0ff;
             text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .content-list ul li a:hover {
+            color: #00f5ff;
+            transform: scale(1.05);
         }
 
         .books-list {
@@ -118,8 +142,15 @@
         }
 
         .books-list ul li a {
-            color: #05121f;
+            color: #0ff;
             text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .books-list ul li a:hover {
+            color: #00f5ff;
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -129,20 +160,18 @@
     </header>
     <nav>
         <ul>
-           
-            <li><a href="1year.html">1st year</a></li>
+           <p> <li><a href="1year.html">1st year</a></li>
             <li><a href="2year.html">2nd year</a></li>
             <li><a href="3year.html">3rd year</a></li>
-            <li><a href="4year.html">4th year</a></li>
+            <li><a href="4year.html">4th year</a></li></p>
         </ul>
     </nav>
     <nav>
         <ul>
-            
-            <li><a href="cse.html">CSE</a></li>
+           <p> <li><a href="cse.html">CSE</a></li>
             <li><a href="aiml.html">AIML</a></li>
             <li><a href="ds.html">DS</a></li>
-            <li><a href="cyber.html">CYBER SECURITY</a></li>
+            <li><a href="cyber.html">CYBER SECURITY</a></li></p>
         </ul>
     </nav>
     <div class="search-bar">
@@ -165,18 +194,18 @@
         <div class="books-list">
             <h2>Online Books</h2>
             <ul id="booksUl">
-                <li><a href="https://www.example.com/cse_book1" target="_blank">Book 1 Title</a></li>
-                <li><a href="https://www.example.com/cse_book2" target="_blank">Book 2 Title</a></li>
-                <li><a href="https://www.example.com/cse_book3" target="_blank">Book 3 Title</a></li>
-                <li><a href="https://www.example.com/cse_book1" target="_blank">Book 1 Title</a></li>
-                <li><a href="https://www.example.com/cse_book2" target="_blank">Book 2 Title</a></li>
-                <li><a href="https://www.example.com/cse_book3" target="_blank">Book 3 Title</a></li>
-                <li><a href="https://www.example.com/cse_book1" target="_blank">Book 1 Title</a></li>
-                <li><a href="https://www.example.com/cse_book2" target="_blank">Book 2 Title</a></li>
-                <li><a href="https://www.example.com/cse_book3" target="_blank">Book 3 Title</a></li>
-                <li><a href="https://www.example.com/cse_book1" target="_blank">Book 1 Title</a></li>
-                <li><a href="https://www.example.com/cse_book2" target="_blank">Book 2 Title</a></li>
-                <li><a href="https://www.example.com/cse_book3" target="_blank">Book 3 Title</a></li>
+                <li><a href="https://www.google.co.in/books/edition/Studying_Engineering/h59xkQEACAAJ?hl=en" target="_blank">Studying Engineering?</a></li>
+                <li><a href="https://www.google.co.in/books/edition/_/OcToAQAAQBAJ?hl=en&gbpv=1" target="_blank">Choosing Engineering As A Career?</a></li>
+                <li><a href="https://www.google.co.in/books/edition/Engineering_in_History/AVn_Sm56OCoC?hl=en&gbpv=1&dq=how+to+choose+course+in+engineering&printsec=frontcover" target="_blank">History Of Engineering</a></li>
+                <li><a href="https://www.google.co.in/books/edition/Understanding_the_Educational_and_Career/fEqCDwAAQBAJ?hl=en&gbpv=1&dq=how+to+choose+course+in+engineering&printsec=frontcover" target="_blank">Understanding The Educational And Career Pathways Of Engineering</a></li>
+                <li><a href="https://www.google.co.in/books/edition/The_College_Solution/-Shhc-gPnuoC?hl=en&gbpv=1&dq=how+to+choose+course+in+engineering&printsec=frontcover" target="_blank">The College Solution</a></li>
+                <li><a href="https://www.google.co.in/books/edition/Build_and_Sustain_a_Career_in_Engineerin/SLEcEAAAQBAJ?hl=en&gbpv=1&dq=how+to+choose+course+in+engineering&printsec=frontcover" target="_blank">Build Your Career</a></li>
+                <li><a href="https://www.google.co.in/books/edition/Getting_into_Engineering_Courses/gCCPDwAAQBAJ?hl=en&gbpv=1&dq=how+to+choose+course+in+engineering&printsec=frontcover" target="_blank">Choose Your Course</a></li>
+                <li><a href="https://www.google.co.in/books/edition/Become_an_Engineer_Not_Just_an_Engineeri/ySHqBQAAQBAJ?hl=en&gbpv=1&dq=how+to+choose+course+in+engineering&printsec=frontcover" target="_blank">BBecome An Engineer Not Just An Engineer Graduate</a></li>
+                <li><a href="https://www.google.co.in/books/edition/Teaching_Engineering_Second_Edition/el7yDwAAQBAJ?hl=en&gbpv=1&dq=how+to+choose+course+in+engineering&printsec=frontcover" target="_blank">(Re)Defining Your Career</a></li>
+                <li><a href="https://www.google.co.in/books/edition/Occupational_Outlook_Handbook/hfbLQMFaHX8C?hl=en&gbpv=1&dq=how+to+choose+course+in+engineering&printsec=frontcover" target="_blank">Occupational Outlook HandBook</a></li>
+                <li><a href="https://www.google.co.in/books/edition/Ethics_in_Engineering_Practice_and_Resea/jonM_OFtXAIC?hl=en&gbpv=1&dq=how+to+choose+course+in+engineering&printsec=frontcover" target="_blank">Ethics In Engineering</a></li>
+                <li><a href="https://www.google.co.in/books/edition/Mechanism_Analysis/w8krBgAAQBAJ?hl=en&gbpv=1&dq=how+to+choose+course+in+engineering&printsec=frontcover" target="_blank">Mechanism Analysis</a></li>
                 <!-- Add more book links here -->
             </ul>
         </div>
